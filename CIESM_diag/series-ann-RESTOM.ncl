@@ -4,7 +4,7 @@ begin
 
 ;casename = (/"PIcontrol_ne30s05_v18"/)
 ;casename = (/"PIcontrol_ne30s05_v11"/)
-;casename=(/"PIC_g16_4xCO2_1"/)
+casename=(/"PIC_g16_4xCO2_1"/)
 ;casename = (/"PIcontrol_ne30s05_v11","PIcontrol_ne30s05_v18"/)
 ;casename=(/"PIcontrol_ne30s05_v11", "PIcontrol_ne30s05_v18","PIC_s05_acc_nochem_1"/)
 ;casename=(/"PIcontrol_ne30s05_v11", "PIcontrol_ne30s05_v18","PIC_s05_acc_nochem_2"/)
@@ -13,7 +13,7 @@ begin
 ;casename=(/"PIC_g16_acc_nochem_1"/)
 ;casename=(/"PIC_g16_1pctCO2_1"/)
 ;casename=(/"PIcontrol_ne30s05_v22"/)
-casename=(/"F1850C5_4xCO2_1"/)
+;casename=(/"F1850C5_4xCO2_1"/)
 
 do_runave = False
 
@@ -33,8 +33,8 @@ nlat						= 96
 nlon						= 144
 
 staryear = "0001" ;"0001"
-endyear = "0037" ;"0113";"0406";"0040"
-nyear = 37 ;113; 406 ; 40 ; 151
+endyear = "0040" ;"0113";"0406";"0040"
+nyear = 40 ;113; 406 ; 40 ; 151
 
 ;	      		0     1      2       3        4         5        6        7        8        9         10       11	12       13       14       15      16
 varsA		= (/"TREFHT","FLNT","FSNT","RESTOM","RESSURF","RESDIFF","CLDLOW","CLDHGH","CLDTOT","TGCLDLWP","PRECT","CDNUMC","FSNS", "FLNS", "LHFLX", "SHFLX","ICEFRAC"/)
@@ -54,7 +54,7 @@ printVarSummary(vars_data)
 do icase=0,ncase-1
 
 fdir 						= "/GPFS/cess1/my-diag/"+casename(icase)+"/"
-if(casename(0).eq."PIC_g16_4xCO2_1" .or. casename(0).eq."PIcontrol_ne30s05_v22")then
+if(casename(0).eq."PIcontrol_ne30s05_v22")then
 fils 						= systemfunc ("ls "+fdir+"/tmp/*.????.ann.mean.nc") ; file paths
 else
 fils 						= systemfunc ("ls "+fdir+casename(icase)+".????.ann.mean.nc") ; file paths

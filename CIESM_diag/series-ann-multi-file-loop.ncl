@@ -29,17 +29,17 @@ begin
 ;casename=(/"PIcontrol_ne30s05_v11", "PIcontrol_ne30s05_v18","PIC_s05_acc_nochem_1","PIC_s05_acc_nochem_2"/)
 ;casename=(/"PIcontrol_ne30s05_v11", "PIcontrol_ne30s05_v22"/)
 ;casename=(/"B20TRC5_ne30s05_v1"/)
-;casename=(/"PIC_g16_acc_nochem_1"/)
+casename=(/"PIC_g16_acc_nochem_1"/)
 ;casename=(/"PIcontrol_ne30s05_v22"/)
 ;casename=(/"PIC_g16_4xCO2_1","PIC_g16_4xCO2_rad_1"/)
 ;casename=(/"F1850C5_4xCO2_1"/)
 ;casename=(/"PIC_g16_4xCO2_no_macro"/)
 
-casename=(/"B20TRC5_g16_acc_nochem_1","B20TRC5_g16_acc_nochem_2"/)
+;casename=(/"B20TRC5_g16_acc_nochem_1","B20TRC5_g16_acc_nochem_2"/)
 
-startyear=1850 ;700 ;1850
-endyear=2010 ;720 ; 1927
-xlabelspacing=50
+startyear=1 ;700 ;1850
+endyear=636 ;720 ; 1927
+xlabelspacing=100
 
 colors	= (/"black","grey","blue","dodgerblue","cyan","red","purple"/)
 

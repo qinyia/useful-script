@@ -22,14 +22,14 @@ vname = "U"
 latname = "lat"
 lonname = "lon"
 
-# ------- open file --------------------
+! ------- open file --------------------
 istat=nf90_open(trim(anal_file),NF90_NOWRITE,ncid)
 if(istat.ne.NF90_NOERR) then
        write(iulog,*)'NF90_OPEN: failed for file ',trim(anal_file)
        write(iulog,*) nf90_strerror(istat)
 end if
 
-# -------- read vname -----------------
+! -------- read vname -----------------
 istat = nf90_inq_varid(ncid,vname,varid)
 if (istat .ne. NF90_NOERR) then
     write(iulog,*) nf90_strerror(istat)
@@ -40,15 +40,15 @@ if (istat .ne. NF90_NOERR) then
     write(iulog,*) nf90_strerror(istat)
 end if
 
-# ------- read lat ---------------------
+! ------- read lat ---------------------
 istat = nf90_inq_varid(ncid,latname,varid1)
 istat = nf90_get_var(ncid,varid1,latval)
 
-# ------ read lon ---------------------
+! ------ read lon ---------------------
 istat = nf90_inq_varid(ncid,lonname,varid2)
 istat = nf90_get_var(ncid,varid2,lonval)
 
-# ----- print index where value is NaN -----------
+! ----- print index where value is NaN -----------
 do i = 1,Nudge_ncol
 do j = 1,Nudge_nlev
     if (isnan(Xanal(i,j))) then
